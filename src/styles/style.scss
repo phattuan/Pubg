@@ -1,0 +1,626 @@
+// @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
+// font-family: 'Abril Fatface', cursive;
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lobster&family=Playfair+Display:ital@1&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  transition: all 0.2s linear;
+  cursor: pointer;
+}
+
+html {
+  scroll-behavior: smooth;
+
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: black;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: rgb(255, 0, 76);
+    border-radius: 3px;
+  }
+}
+
+body {
+  font-family: "Abril Fatface", cursive;
+  background-image: url(../../resources/images/background-den-dep-nhat-1.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.header {
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  height: 70px;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.3);
+  .nav {
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+
+    a {
+      display: inline-block;
+      color: white;
+      margin: 1rem 3rem;
+      font-size: 1.3rem;
+      transition: transform 0.3s linear;
+      text-shadow: 2px 2px 10px rgba(255, 0, 0, 0.7);
+
+      &:hover {
+        color: lime;
+        transform: translateY(-5px);
+      }
+    }
+  }
+  .logo {
+    position: absolute;
+    left: 48vw;
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    border: 3px solid white;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px rgba(255, 0, 0, 0.7);
+
+    p {
+      font-family: "Lobster", cursive;
+      color: white;
+      margin-top: 1.2rem;
+      font-size: 1.4rem;
+      text-shadow: 2px 2px 10px rgba(255, 0, 0, 0.7);
+    }
+  }
+  .tools {
+    position: absolute;
+    display: inline-block;
+    z-index: 10000000000;
+    right: 30px;
+    top: 1.2rem;
+
+    i {
+      color: white;
+      font-size: 1.5rem;
+      margin: 0 2rem;
+    }
+
+    #menu {
+      display: none;
+    }
+  }
+}
+
+// ==================
+
+.home {
+  position: relative;
+  padding-top: 70px;
+  height: 100vh;
+  img#avata {
+    position: absolute;
+    bottom: 3%;
+    left: 3%;
+    width: 670px;
+  }
+  .talk {
+    position: absolute;
+    right: 20%;
+    top: 40%;
+    z-index: 99;
+
+    p {
+      font-family: "Lobster", cursive;
+      font-size: 2.5rem;
+      color: white;
+      text-shadow: 0px 0px 10px yellow;
+      animation-name: efect_text_talk ,jackInTheBox;
+      animation-duration: 5s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+      animation-direction: alternate;
+
+      
+    }
+  }
+
+  .moon {
+    position: absolute;
+    z-index: 888;
+    width: 200px;
+    height: 200px;
+    top: 15%;
+    right: 10%;
+    border-radius: 50%;
+    background-image: url(../../resources/images/moon.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0px 0px 100px rgb(255, 255, 255);
+    transition: all 0.4s linear;
+
+    animation-name: efect_moon;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+
+  .title_2 {
+    position: absolute;
+    bottom: 10px;
+    right: 10%;
+    display: flex;
+    img {
+      display: inline-block;
+    }
+    img#guns {
+      transform: rotateY(180deg);
+      width: 200px;
+    }
+    img#dan {
+      width: 100px;
+    }
+    p {
+      display: inline-block;
+      margin-top: 22px;
+      color: white;
+      font-size: 1.5rem;
+      font-family: "Lobster", cursive;
+      text-shadow: 0 0 10px yellow;
+    }
+  }
+}
+
+// ============
+
+.icon_contaxt {
+  position: fixed;
+  z-index: 9999;
+  top: 30vh;
+  right: 2vw;
+
+  i {
+    display: block;
+    margin: 3rem 0;
+    font-size: 2rem;
+    color: white;
+    text-shadow: 2px 2px 5px deeppink;
+    transition: transform 0.3s linear;
+
+    &:hover {
+      color: greenyellow;
+      transform: translateY(-5px);
+    }
+  }
+}
+
+.profile_player {
+  position: relative;
+  margin-top: 15vh;
+
+  .title_profile_player {
+    width: 100%;
+    text-align: center;
+    padding: 5vh 0;
+    p {
+      color: white;
+      text-transform: capitalize;
+      font-family: "Lobster", cursive;
+      font-weight: bold;
+      font-size: 3rem;
+      animation-name: efect_text;
+      animation-duration: 5s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+    }
+  }
+
+  .container_pro {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(35vw, 1fr));
+    column-gap: 5vw;
+    row-gap: 2vw;
+    padding: 0 10vw;
+  }
+
+  .profile {
+    position: relative;
+    width: 100%;
+    height: 35vh;
+    padding: 2rem 2rem;
+    // border: 2px solid black;
+    border-radius: 2rem;
+    transition: transform 0.3s linear;
+    background: #1e9600; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      45deg,
+      #ff0000,
+      #fff200,
+      #1e9600
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      45deg,
+      #ff0000,
+      #fff200,
+      #1e9600
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    box-shadow: 5px 5px 10px chartreuse;
+
+    &:hover {
+      background: #40e0d0; /* fallback for old browsers */
+      background: -webkit-linear-gradient(
+        -45deg,
+        #ff0080,
+        #ff8c00,
+        #40e0d0
+      ); /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(
+        -45deg,
+        #ff0080,
+        #ff8c00,
+        #40e0d0
+      ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+      transform: scale(1.05);
+      box-shadow: 5px 5px 10px #ff0080;
+    }
+
+    img {
+      position: absolute;
+      right: 1rem;
+      width: 13vw;
+      height: 13vw;
+      border-radius: 50%;
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
+    }
+
+    .inf {
+      display: block;
+
+      div {
+        display: block;
+        p {
+          font-family: "Playfair Display", serif;
+          font-weight: bold;
+          line-height: 4vw;
+          display: inline;
+          text-transform: capitalize;
+          color: rgb(0, 0, 0);
+          font-size: 1.5vw;
+        }
+        .key {
+          color: rgb(252, 252, 252);
+          margin-right: 1rem;
+        }
+      }
+    }
+  }
+}
+
+// ================/
+
+.top_1 {
+  width: 100%;
+  display: flex;
+  margin-top: 10vh;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 0.5rem;
+
+  .title_win {
+    text-align: center;
+
+    p {
+      font-family: "Lobster", cursive;
+      font-weight: bold;
+      font-size: 3rem;
+      color: white;
+      text-shadow: 0 0 10px yellow;
+      text-transform: capitalize;
+      animation-name: efect_text;
+      animation-duration: 5s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+    }
+  }
+
+  .layout_column {
+    display: flex;
+    flex-direction: row;
+    gap: 6vw;
+    margin-top: 10vh;
+    justify-content: center;
+
+    .col {
+      display: flex;
+      flex-direction: column;
+      gap: 5vh;
+      div {
+        position: relative;
+        width: 40vw;
+        object-fit: cover;
+        line-height: 1.8rem;
+        border-radius: 1.5rem;
+        border: 2px solid rgb(255, 255, 255);
+        overflow: hidden;
+        transition: transform 0.4s linear;
+
+        .as {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 10;
+          border: none;
+
+          .icon_img {
+
+            width: fit-content;
+            margin-top: 5vw;
+            border: none;
+            margin-left: 1rem;
+            clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+
+            i {
+              display: block;
+              font-size: 2vw;
+              color: rgb(255, 255, 255);
+              margin: 2rem 1rem;
+              transition: transform 0.3s ease;
+
+              &:hover {
+                color: deeppink;
+                transform: scale(1.1);
+              }
+            }
+          }
+        }
+
+        &:hover {
+          img {
+            transform: scale(1.2);
+          }
+          .as {
+            background-color: rgba(0, 0, 0, 0.5);
+            .icon_img {
+              clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            }
+          }
+        }
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+
+// ========================= //
+
+.copyright {
+  padding: 5rem 0;
+  text-align: center;
+
+  h {
+    font-family: "Lobster", cursive;
+    font-size: 3rem;
+    color: white;
+    text-transform: capitalize;
+    text-shadow: 0 0 10px #fff200;
+    animation-name: efect_title_copyright;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+  }
+}
+
+@keyframes efect_moon {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes efect_text {
+  0% {
+    color: white;
+    text-shadow: 0 0 10px yellow;
+  }
+  25% {
+    color: rgb(233, 58, 125);
+    text-shadow: 0 0 10px rgb(9, 255, 0);
+  }
+  50% {
+    color: rgb(255, 217, 0);
+    text-shadow: 0 0 10px rgb(255, 0, 98);
+  }
+  75% {
+    color: rgb(0, 255, 0);
+    text-shadow: 0 0 10px rgb(241, 241, 241);
+  }
+  100% {
+    color: rgb(0, 238, 255);
+    text-shadow: 0 0 10px rgb(204, 0, 255);
+  }
+}
+@keyframes efect_text_talk {
+  0% {
+    text-shadow: 0 0 10px rgb(255, 0, 0);
+  }
+  25% {
+    text-shadow: 0 0 10px rgb(236, 253, 0);
+  }
+  50% {
+    text-shadow: 0 0 10px rgb(255, 255, 255);
+  }
+  75% {
+    text-shadow: 0 0 10px rgb(0, 255, 34);
+  }
+  100% {
+    text-shadow: 0 0 10px rgb(68, 0, 255);
+  }
+}
+
+@keyframes efect_title_copyright {
+  0% {
+    color: white;
+    text-shadow: 0 0 10px rgb(255, 255, 255);
+  }
+  25% {
+    color: rgb(255, 0, 0);
+    text-shadow: 0 0 10px rgb(255, 0, 0);
+  }
+  50% {
+    color: rgb(255, 230, 0);
+    text-shadow: 0 0 10px rgb(255, 230, 0);
+  }
+  75% {
+    color: rgb(0, 255, 0);
+    text-shadow: 0 0 10px rgb(0, 255, 0);
+  }
+  100% {
+    color: rgb(0, 204, 255);
+    text-shadow: 0 0 10px rgb(0, 204, 255);
+  }
+}
+
+@media (max-width: 1240px) {
+  .home {
+    img#avata {
+      width: 580px;
+    }
+    .talk {
+      top: 45%;
+      right: 15vw;
+
+      p {
+        font-size: 2rem;
+      }
+    }
+
+    .moon {
+      width: 150px;
+      height: 150px;
+      top: 20%;
+    }
+
+    .title_2 {
+      right: 2vw;
+      img#guns {
+        transform: rotateY(180deg);
+        width: 150px;
+        margin-top: 10px;
+      }
+      img#dan {
+        margin-top: 14px;
+        width: 70px;
+        height: 50px;
+      }
+      p {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 930px) {
+  .header {
+    .nav {
+      position: absolute;
+      width: 100%;
+      top: 99%;
+      left: 0;
+      z-index: 10000000;
+      display: inline-block;
+      background-color: rgba(0, 0, 0, 0.3);
+      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+
+      &.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      }
+      a {
+        display: block;
+        line-height: 3rem;
+        text-shadow: 2px 2px 10px rgb(238, 255, 0);
+      }
+    }
+    .logo {
+      left: 5vw;
+    }
+    .tools {
+      position: absolute;
+      display: inline-block;
+      right: 30px;
+      top: 1.2rem;
+
+      i {
+        color: white;
+        font-size: 1.5rem;
+        margin: 0 2rem;
+      }
+
+      #menu {
+        display: inline-block;
+      }
+    }
+  }
+  .home {
+    img#avata {
+      width: 550px;
+      left: 5px;
+    }
+    .talk {
+      top: 45%;
+      right: 15vw;
+
+      p {
+        font-size: 1.5rem;
+      }
+    }
+
+    .moon {
+      width: 120px;
+      height: 120px;
+      top: 27%;
+    }
+
+    .title_2 {
+      right: 2vw;
+      img#guns {
+        transform: rotateY(180deg);
+        width: 120px;
+        margin-top: 10px;
+      }
+      img#dan {
+        margin-top: 24px;
+        width: 50px;
+        height: 30px;
+      }
+      p {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}

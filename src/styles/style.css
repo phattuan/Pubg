@@ -1,0 +1,774 @@
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lobster&family=Playfair+Display:ital@1&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  cursor: pointer;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+  width: 5px;
+}
+
+html::-webkit-scrollbar-track {
+  background-color: black;
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: #ff004c;
+  border-radius: 3px;
+}
+
+body {
+  font-family: "Abril Fatface", cursive;
+  background-image: url(../../resources/images/background-den-dep-nhat-1.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.header {
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  height: 70px;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.header .nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 70px;
+}
+
+.header .nav a {
+  display: inline-block;
+  color: white;
+  margin: 1rem 3rem;
+  font-size: 1.3rem;
+  -webkit-transition: -webkit-transform 0.3s linear;
+  transition: -webkit-transform 0.3s linear;
+  transition: transform 0.3s linear;
+  transition: transform 0.3s linear, -webkit-transform 0.3s linear;
+  text-shadow: 2px 2px 10px rgba(255, 0, 0, 0.7);
+}
+
+.header .nav a:hover {
+  color: lime;
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+}
+
+.header .logo {
+  position: absolute;
+  left: 48vw;
+  display: inline-block;
+  width: 70px;
+  height: 70px;
+  border: 3px solid white;
+  border-radius: 50%;
+  -webkit-box-shadow: 0px 0px 10px rgba(255, 0, 0, 0.7);
+          box-shadow: 0px 0px 10px rgba(255, 0, 0, 0.7);
+}
+
+.header .logo p {
+  font-family: "Lobster", cursive;
+  color: white;
+  margin-top: 1.2rem;
+  font-size: 1.4rem;
+  text-shadow: 2px 2px 10px rgba(255, 0, 0, 0.7);
+}
+
+.header .tools {
+  position: absolute;
+  display: inline-block;
+  z-index: 10000000000;
+  right: 30px;
+  top: 1.2rem;
+}
+
+.header .tools i {
+  color: white;
+  font-size: 1.5rem;
+  margin: 0 2rem;
+}
+
+.header .tools #menu {
+  display: none;
+}
+
+.home {
+  position: relative;
+  padding-top: 70px;
+  height: 100vh;
+}
+
+.home img#avata {
+  position: absolute;
+  bottom: 3%;
+  left: 3%;
+  width: 670px;
+}
+
+.home .talk {
+  position: absolute;
+  right: 20%;
+  top: 40%;
+  z-index: 99;
+}
+
+.home .talk p {
+  font-family: "Lobster", cursive;
+  font-size: 2.5rem;
+  color: white;
+  text-shadow: 0px 0px 10px yellow;
+  -webkit-animation-name: efect_text_talk ,jackInTheBox;
+          animation-name: efect_text_talk ,jackInTheBox;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+
+.home .moon {
+  position: absolute;
+  z-index: 888;
+  width: 200px;
+  height: 200px;
+  top: 15%;
+  right: 10%;
+  border-radius: 50%;
+  background-image: url(../../resources/images/moon.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  -webkit-box-shadow: 0px 0px 100px white;
+          box-shadow: 0px 0px 100px white;
+  -webkit-transition: all 0.4s linear;
+  transition: all 0.4s linear;
+  -webkit-animation-name: efect_moon;
+          animation-name: efect_moon;
+  -webkit-animation-duration: 10s;
+          animation-duration: 10s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+.home .title_2 {
+  position: absolute;
+  bottom: 10px;
+  right: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.home .title_2 img {
+  display: inline-block;
+}
+
+.home .title_2 img#guns {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  width: 200px;
+}
+
+.home .title_2 img#dan {
+  width: 100px;
+}
+
+.home .title_2 p {
+  display: inline-block;
+  margin-top: 22px;
+  color: white;
+  font-size: 1.5rem;
+  font-family: "Lobster", cursive;
+  text-shadow: 0 0 10px yellow;
+}
+
+.icon_contaxt {
+  position: fixed;
+  z-index: 9999;
+  top: 30vh;
+  right: 2vw;
+}
+
+.icon_contaxt i {
+  display: block;
+  margin: 3rem 0;
+  font-size: 2rem;
+  color: white;
+  text-shadow: 2px 2px 5px deeppink;
+  -webkit-transition: -webkit-transform 0.3s linear;
+  transition: -webkit-transform 0.3s linear;
+  transition: transform 0.3s linear;
+  transition: transform 0.3s linear, -webkit-transform 0.3s linear;
+}
+
+.icon_contaxt i:hover {
+  color: greenyellow;
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+}
+
+.profile_player {
+  position: relative;
+  margin-top: 15vh;
+}
+
+.profile_player .title_profile_player {
+  width: 100%;
+  text-align: center;
+  padding: 5vh 0;
+}
+
+.profile_player .title_profile_player p {
+  color: white;
+  text-transform: capitalize;
+  font-family: "Lobster", cursive;
+  font-weight: bold;
+  font-size: 3rem;
+  -webkit-animation-name: efect_text;
+          animation-name: efect_text;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.profile_player .container_pro {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(35vw, 1fr))[2];
+      grid-template-columns: repeat(2, minmax(35vw, 1fr));
+  -webkit-column-gap: 5vw;
+          column-gap: 5vw;
+  row-gap: 2vw;
+  padding: 0 10vw;
+}
+
+.profile_player .profile {
+  position: relative;
+  width: 100%;
+  height: 35vh;
+  padding: 2rem 2rem;
+  border-radius: 2rem;
+  -webkit-transition: -webkit-transform 0.3s linear;
+  transition: -webkit-transform 0.3s linear;
+  transition: transform 0.3s linear;
+  transition: transform 0.3s linear, -webkit-transform 0.3s linear;
+  background: #1e9600;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(45deg, #ff0000, #fff200, #1e9600);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-box-shadow: 5px 5px 10px chartreuse;
+          box-shadow: 5px 5px 10px chartreuse;
+}
+
+.profile_player .profile:hover {
+  background: #40e0d0;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(-45deg, #ff0080, #ff8c00, #40e0d0);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-box-shadow: 5px 5px 10px #ff0080;
+          box-shadow: 5px 5px 10px #ff0080;
+}
+
+.profile_player .profile img {
+  position: absolute;
+  right: 1rem;
+  width: 13vw;
+  height: 13vw;
+  border-radius: 50%;
+  -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
+          box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
+}
+
+.profile_player .profile .inf {
+  display: block;
+}
+
+.profile_player .profile .inf div {
+  display: block;
+}
+
+.profile_player .profile .inf div p {
+  font-family: "Playfair Display", serif;
+  font-weight: bold;
+  line-height: 4vw;
+  display: inline;
+  text-transform: capitalize;
+  color: black;
+  font-size: 1.5vw;
+}
+
+.profile_player .profile .inf div .key {
+  color: #fcfcfc;
+  margin-right: 1rem;
+}
+
+.top_1 {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 10vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 0.5rem;
+}
+
+.top_1 .title_win {
+  text-align: center;
+}
+
+.top_1 .title_win p {
+  font-family: "Lobster", cursive;
+  font-weight: bold;
+  font-size: 3rem;
+  color: white;
+  text-shadow: 0 0 10px yellow;
+  text-transform: capitalize;
+  -webkit-animation-name: efect_text;
+          animation-name: efect_text;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.top_1 .layout_column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 6vw;
+  margin-top: 10vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.top_1 .layout_column .col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5vh;
+}
+
+.top_1 .layout_column .col div {
+  position: relative;
+  width: 40vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+  line-height: 1.8rem;
+  border-radius: 1.5rem;
+  border: 2px solid white;
+  overflow: hidden;
+  -webkit-transition: -webkit-transform 0.4s linear;
+  transition: -webkit-transform 0.4s linear;
+  transition: transform 0.4s linear;
+  transition: transform 0.4s linear, -webkit-transform 0.4s linear;
+}
+
+.top_1 .layout_column .col div .as {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  border: none;
+}
+
+.top_1 .layout_column .col div .as .icon_img {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-top: 5vw;
+  border: none;
+  margin-left: 1rem;
+  -webkit-clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+          clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+}
+
+.top_1 .layout_column .col div .as .icon_img i {
+  display: block;
+  font-size: 2vw;
+  color: white;
+  margin: 2rem 1rem;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+.top_1 .layout_column .col div .as .icon_img i:hover {
+  color: deeppink;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.top_1 .layout_column .col div:hover img {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.top_1 .layout_column .col div:hover .as {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.top_1 .layout_column .col div:hover .as .icon_img {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.top_1 .layout_column .col div img {
+  width: 100%;
+  height: 100%;
+}
+
+.copyright {
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.copyright h {
+  font-family: "Lobster", cursive;
+  font-size: 3rem;
+  color: white;
+  text-transform: capitalize;
+  text-shadow: 0 0 10px #fff200;
+  -webkit-animation-name: efect_title_copyright;
+          animation-name: efect_title_copyright;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes efect_moon {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  25% {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  75% {
+    -webkit-transform: rotate(270deg);
+            transform: rotate(270deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes efect_moon {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  25% {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  75% {
+    -webkit-transform: rotate(270deg);
+            transform: rotate(270deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes efect_text {
+  0% {
+    color: white;
+    text-shadow: 0 0 10px yellow;
+  }
+  25% {
+    color: #e93a7d;
+    text-shadow: 0 0 10px #09ff00;
+  }
+  50% {
+    color: #ffd900;
+    text-shadow: 0 0 10px #ff0062;
+  }
+  75% {
+    color: lime;
+    text-shadow: 0 0 10px #f1f1f1;
+  }
+  100% {
+    color: #00eeff;
+    text-shadow: 0 0 10px #cc00ff;
+  }
+}
+
+@keyframes efect_text {
+  0% {
+    color: white;
+    text-shadow: 0 0 10px yellow;
+  }
+  25% {
+    color: #e93a7d;
+    text-shadow: 0 0 10px #09ff00;
+  }
+  50% {
+    color: #ffd900;
+    text-shadow: 0 0 10px #ff0062;
+  }
+  75% {
+    color: lime;
+    text-shadow: 0 0 10px #f1f1f1;
+  }
+  100% {
+    color: #00eeff;
+    text-shadow: 0 0 10px #cc00ff;
+  }
+}
+
+@-webkit-keyframes efect_text_talk {
+  0% {
+    text-shadow: 0 0 10px red;
+  }
+  25% {
+    text-shadow: 0 0 10px #ecfd00;
+  }
+  50% {
+    text-shadow: 0 0 10px white;
+  }
+  75% {
+    text-shadow: 0 0 10px #00ff22;
+  }
+  100% {
+    text-shadow: 0 0 10px #4400ff;
+  }
+}
+
+@keyframes efect_text_talk {
+  0% {
+    text-shadow: 0 0 10px red;
+  }
+  25% {
+    text-shadow: 0 0 10px #ecfd00;
+  }
+  50% {
+    text-shadow: 0 0 10px white;
+  }
+  75% {
+    text-shadow: 0 0 10px #00ff22;
+  }
+  100% {
+    text-shadow: 0 0 10px #4400ff;
+  }
+}
+
+@-webkit-keyframes efect_title_copyright {
+  0% {
+    color: white;
+    text-shadow: 0 0 10px white;
+  }
+  25% {
+    color: red;
+    text-shadow: 0 0 10px red;
+  }
+  50% {
+    color: #ffe600;
+    text-shadow: 0 0 10px #ffe600;
+  }
+  75% {
+    color: lime;
+    text-shadow: 0 0 10px lime;
+  }
+  100% {
+    color: #00ccff;
+    text-shadow: 0 0 10px #00ccff;
+  }
+}
+
+@keyframes efect_title_copyright {
+  0% {
+    color: white;
+    text-shadow: 0 0 10px white;
+  }
+  25% {
+    color: red;
+    text-shadow: 0 0 10px red;
+  }
+  50% {
+    color: #ffe600;
+    text-shadow: 0 0 10px #ffe600;
+  }
+  75% {
+    color: lime;
+    text-shadow: 0 0 10px lime;
+  }
+  100% {
+    color: #00ccff;
+    text-shadow: 0 0 10px #00ccff;
+  }
+}
+
+@media (max-width: 1240px) {
+  .home img#avata {
+    width: 580px;
+  }
+  .home .talk {
+    top: 45%;
+    right: 15vw;
+  }
+  .home .talk p {
+    font-size: 2rem;
+  }
+  .home .moon {
+    width: 150px;
+    height: 150px;
+    top: 20%;
+  }
+  .home .title_2 {
+    right: 2vw;
+  }
+  .home .title_2 img#guns {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+    width: 150px;
+    margin-top: 10px;
+  }
+  .home .title_2 img#dan {
+    margin-top: 14px;
+    width: 70px;
+    height: 50px;
+  }
+  .home .title_2 p {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 930px) {
+  .header .nav {
+    position: absolute;
+    width: 100%;
+    top: 99%;
+    left: 0;
+    z-index: 10000000;
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.3);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  .header .nav.active {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  .header .nav a {
+    display: block;
+    line-height: 3rem;
+    text-shadow: 2px 2px 10px #eeff00;
+  }
+  .header .logo {
+    left: 5vw;
+  }
+  .header .tools {
+    position: absolute;
+    display: inline-block;
+    right: 30px;
+    top: 1.2rem;
+  }
+  .header .tools i {
+    color: white;
+    font-size: 1.5rem;
+    margin: 0 2rem;
+  }
+  .header .tools #menu {
+    display: inline-block;
+  }
+  .home img#avata {
+    width: 550px;
+    left: 5px;
+  }
+  .home .talk {
+    top: 45%;
+    right: 15vw;
+  }
+  .home .talk p {
+    font-size: 1.5rem;
+  }
+  .home .moon {
+    width: 120px;
+    height: 120px;
+    top: 27%;
+  }
+  .home .title_2 {
+    right: 2vw;
+  }
+  .home .title_2 img#guns {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+    width: 120px;
+    margin-top: 10px;
+  }
+  .home .title_2 img#dan {
+    margin-top: 24px;
+    width: 50px;
+    height: 30px;
+  }
+  .home .title_2 p {
+    font-size: 1.2rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */

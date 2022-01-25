@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lobster&family=Playfair+Display:ital@1&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+html {
+  &::-webkit-scrollbar {
+    width: 7px;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: black;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: greenyellow;
+  }
+}
+
+body {
+  padding: 27.5vh 40vw;
+  background: #c31432; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    45deg,
+    #240b36,
+    #c31432
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    45deg,
+    #240b36,
+    #c31432
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.img_1 {
+  position: absolute;
+  width: 35vw;
+  bottom: 0;
+  left: 5vw;
+  z-index: 1;
+
+  img {
+    width: 100%;
+  }
+}
+
+.container_log {
+  width: 40vw;
+  height: 45vh;
+  border: 2px solid white;
+  border-radius: 2rem;
+
+  .sign_regis {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border-bottom: 2px solid white;
+
+    p {
+      font-size: 2rem;
+      font-weight: bold;
+      text-transform: capitalize;
+      color: white;
+
+      &:hover {
+        color: aquamarine;
+      }
+    }
+  }
+  .sign_detile {
+    .inf_player {
+      padding: 3rem 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+
+      .input_pl {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 25vw;
+
+        label {
+          text-transform: uppercase;
+          color: white;
+        }
+        input {
+          width: 15vw;
+          border-radius: 1rem;
+          padding: 0.2rem;
+          border: 2px solid rgb(255, 255, 255);
+          background: transparent;
+          color: white;
+
+          &:hover {
+            border: 2px solid rgb(0, 0, 0);
+          }
+        }
+      }
+    }
+
+    .butt_sign {
+      margin-left: 25vw;
+      width: 7vw;
+      height: 5vh;
+      border-radius: 3rem;
+      background: transparent;
+      border: 2px solid greenyellow;
+      color: white;
+      text-transform: uppercase;
+      transition: all 0.4 ease;
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.3);
+      }
+    }
+  }
+
+  &.active {
+  }
+}

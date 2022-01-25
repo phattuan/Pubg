@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lobster&family=Playfair+Display:ital@1&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  cursor: pointer;
+}
+
+html::-webkit-scrollbar {
+  width: 7px;
+}
+
+html::-webkit-scrollbar-track {
+  background-color: black;
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: greenyellow;
+}
+
+body {
+  padding: 27.5vh 40vw;
+  background: #c31432;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(45deg, #240b36, #c31432);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.img_1 {
+  position: absolute;
+  width: 35vw;
+  bottom: 0;
+  left: 5vw;
+  z-index: 1;
+}
+
+.img_1 img {
+  width: 100%;
+}
+
+.container_log {
+  width: 40vw;
+  height: 45vh;
+  border: 2px solid white;
+  border-radius: 2rem;
+}
+
+.container_log .sign_regis {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  border-bottom: 2px solid white;
+}
+
+.container_log .sign_regis p {
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: capitalize;
+  color: white;
+}
+
+.container_log .sign_regis p:hover {
+  color: aquamarine;
+}
+
+.container_log .sign_detile .inf_player {
+  padding: 3rem 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+}
+
+.container_log .sign_detile .inf_player .input_pl {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 25vw;
+}
+
+.container_log .sign_detile .inf_player .input_pl label {
+  text-transform: uppercase;
+  color: white;
+}
+
+.container_log .sign_detile .inf_player .input_pl input {
+  width: 15vw;
+  border-radius: 1rem;
+  padding: 0.2rem;
+  border: 2px solid white;
+  background: transparent;
+  color: white;
+}
+
+.container_log .sign_detile .inf_player .input_pl input:hover {
+  border: 2px solid black;
+}
+
+.container_log .sign_detile .butt_sign {
+  margin-left: 25vw;
+  width: 7vw;
+  height: 5vh;
+  border-radius: 3rem;
+  background: transparent;
+  border: 2px solid greenyellow;
+  color: white;
+  text-transform: uppercase;
+  -webkit-transition: all 0.4 ease;
+  transition: all 0.4 ease;
+}
+
+.container_log .sign_detile .butt_sign:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+/*# sourceMappingURL=sign.css.map */
